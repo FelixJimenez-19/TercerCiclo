@@ -1,0 +1,42 @@
+using System;
+
+namespace RegistroEstudiantes
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("=== Registro de Estudiante ===");
+
+            // Solicita los datos básicos
+            Console.Write("Ingrese el ID: ");
+            int id = int.Parse(Console.ReadLine());
+
+            Console.Write("Ingrese los nombres: ");
+            string nombres = Console.ReadLine();
+
+            Console.Write("Ingrese los apellidos: ");
+            string apellidos = Console.ReadLine();
+
+            Console.Write("Ingrese la dirección: ");
+            string direccion = Console.ReadLine();
+
+            // Crea el array para los teléfonos
+            string[] telefonos = new string[3];
+            for (int i = 0; i < 3; i++)
+            {
+                Console.Write($"Ingrese el teléfono {i + 1}: ");
+                telefonos[i] = Console.ReadLine();
+            }
+
+            // Crear el objeto Estudiante
+            Estudiante estudiante = new Estudiante(id, nombres, apellidos, direccion, telefonos);
+
+            // Mostrar los datos
+            estudiante.MostrarInformacion();
+
+            Console.WriteLine("\nPresione cualquier tecla para salir...");
+            Console.ReadKey();
+        }
+    }
+}

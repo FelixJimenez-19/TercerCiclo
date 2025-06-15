@@ -1,0 +1,14 @@
+C:\Users\user\Downloads\more\Felix UEA documents\Estructuradedatos\bin\Debug\net9.0\Estructuradedatos.exe
+C:\Users\user\Downloads\more\Felix UEA documents\Estructuradedatos\bin\Debug\net9.0\Estructuradedatos.deps.json
+C:\Users\user\Downloads\more\Felix UEA documents\Estructuradedatos\bin\Debug\net9.0\Estructuradedatos.runtimeconfig.json
+C:\Users\user\Downloads\more\Felix UEA documents\Estructuradedatos\bin\Debug\net9.0\Estructuradedatos.dll
+C:\Users\user\Downloads\more\Felix UEA documents\Estructuradedatos\bin\Debug\net9.0\Estructuradedatos.pdb
+C:\Users\user\Downloads\more\Felix UEA documents\Estructuradedatos\obj\Debug\net9.0\Estructuradedatos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Downloads\more\Felix UEA documents\Estructuradedatos\obj\Debug\net9.0\Estructuradedatos.AssemblyInfoInputs.cache
+C:\Users\user\Downloads\more\Felix UEA documents\Estructuradedatos\obj\Debug\net9.0\Estructuradedatos.AssemblyInfo.cs
+C:\Users\user\Downloads\more\Felix UEA documents\Estructuradedatos\obj\Debug\net9.0\Estructuradedatos.csproj.CoreCompileInputs.cache
+C:\Users\user\Downloads\more\Felix UEA documents\Estructuradedatos\obj\Debug\net9.0\Estructuradedatos.dll
+C:\Users\user\Downloads\more\Felix UEA documents\Estructuradedatos\obj\Debug\net9.0\refint\Estructuradedatos.dll
+C:\Users\user\Downloads\more\Felix UEA documents\Estructuradedatos\obj\Debug\net9.0\Estructuradedatos.pdb
+C:\Users\user\Downloads\more\Felix UEA documents\Estructuradedatos\obj\Debug\net9.0\Estructuradedatos.genruntimeconfig.cache
+C:\Users\user\Downloads\more\Felix UEA documents\Estructuradedatos\obj\Debug\net9.0\ref\Estructuradedatos.dll
