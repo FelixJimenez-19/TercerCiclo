@@ -1,0 +1,5 @@
+C:\Users\user\Downloads\more Felix UEA\Felix UEA documents\estructura de datos\tercerciclo\TercerCiclo\semana05\obj\Debug\net9.0\semana05.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Downloads\more Felix UEA\Felix UEA documents\estructura de datos\tercerciclo\TercerCiclo\semana05\obj\Debug\net9.0\semana05.AssemblyInfoInputs.cache
+C:\Users\user\Downloads\more Felix UEA\Felix UEA documents\estructura de datos\tercerciclo\TercerCiclo\semana05\obj\Debug\net9.0\semana05.AssemblyInfo.cs
+C:\Users\user\Downloads\more Felix UEA\Felix UEA documents\estructura de datos\tercerciclo\TercerCiclo\semana05\obj\Debug\net9.0\semana05.csproj.CoreCompileInputs.cache
+C:\Users\user\Downloads\more Felix UEA\Felix UEA documents\estructura de datos\tercerciclo\TercerCiclo\semana05\obj\Debug\net9.0\semana05.sourcelink.json
