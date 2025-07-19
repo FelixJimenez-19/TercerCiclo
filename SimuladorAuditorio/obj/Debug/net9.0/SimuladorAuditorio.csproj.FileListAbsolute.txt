@@ -1,0 +1,15 @@
+C:\Users\felix\Documents\more Felix UEA\Felix UEA documents\estructura de datos\TercerCiclo\SimuladorAuditorio\bin\Debug\net9.0\SimuladorAuditorio.exe
+C:\Users\felix\Documents\more Felix UEA\Felix UEA documents\estructura de datos\TercerCiclo\SimuladorAuditorio\bin\Debug\net9.0\SimuladorAuditorio.deps.json
+C:\Users\felix\Documents\more Felix UEA\Felix UEA documents\estructura de datos\TercerCiclo\SimuladorAuditorio\bin\Debug\net9.0\SimuladorAuditorio.runtimeconfig.json
+C:\Users\felix\Documents\more Felix UEA\Felix UEA documents\estructura de datos\TercerCiclo\SimuladorAuditorio\bin\Debug\net9.0\SimuladorAuditorio.dll
+C:\Users\felix\Documents\more Felix UEA\Felix UEA documents\estructura de datos\TercerCiclo\SimuladorAuditorio\bin\Debug\net9.0\SimuladorAuditorio.pdb
+C:\Users\felix\Documents\more Felix UEA\Felix UEA documents\estructura de datos\TercerCiclo\SimuladorAuditorio\obj\Debug\net9.0\SimuladorAuditorio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\felix\Documents\more Felix UEA\Felix UEA documents\estructura de datos\TercerCiclo\SimuladorAuditorio\obj\Debug\net9.0\SimuladorAuditorio.AssemblyInfoInputs.cache
+C:\Users\felix\Documents\more Felix UEA\Felix UEA documents\estructura de datos\TercerCiclo\SimuladorAuditorio\obj\Debug\net9.0\SimuladorAuditorio.AssemblyInfo.cs
+C:\Users\felix\Documents\more Felix UEA\Felix UEA documents\estructura de datos\TercerCiclo\SimuladorAuditorio\obj\Debug\net9.0\SimuladorAuditorio.csproj.CoreCompileInputs.cache
+C:\Users\felix\Documents\more Felix UEA\Felix UEA documents\estructura de datos\TercerCiclo\SimuladorAuditorio\obj\Debug\net9.0\SimuladorAuditorio.sourcelink.json
+C:\Users\felix\Documents\more Felix UEA\Felix UEA documents\estructura de datos\TercerCiclo\SimuladorAuditorio\obj\Debug\net9.0\SimuladorAuditorio.dll
+C:\Users\felix\Documents\more Felix UEA\Felix UEA documents\estructura de datos\TercerCiclo\SimuladorAuditorio\obj\Debug\net9.0\refint\SimuladorAuditorio.dll
+C:\Users\felix\Documents\more Felix UEA\Felix UEA documents\estructura de datos\TercerCiclo\SimuladorAuditorio\obj\Debug\net9.0\SimuladorAuditorio.pdb
+C:\Users\felix\Documents\more Felix UEA\Felix UEA documents\estructura de datos\TercerCiclo\SimuladorAuditorio\obj\Debug\net9.0\SimuladorAuditorio.genruntimeconfig.cache
+C:\Users\felix\Documents\more Felix UEA\Felix UEA documents\estructura de datos\TercerCiclo\SimuladorAuditorio\obj\Debug\net9.0\ref\SimuladorAuditorio.dll
