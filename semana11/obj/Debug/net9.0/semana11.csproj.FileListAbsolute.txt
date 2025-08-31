@@ -1,0 +1,15 @@
+C:\Users\felix\Documents\estructura de Datos\repositorio\TercerCiclo\semana11\bin\Debug\net9.0\semana11.exe
+C:\Users\felix\Documents\estructura de Datos\repositorio\TercerCiclo\semana11\bin\Debug\net9.0\semana11.deps.json
+C:\Users\felix\Documents\estructura de Datos\repositorio\TercerCiclo\semana11\bin\Debug\net9.0\semana11.runtimeconfig.json
+C:\Users\felix\Documents\estructura de Datos\repositorio\TercerCiclo\semana11\bin\Debug\net9.0\semana11.dll
+C:\Users\felix\Documents\estructura de Datos\repositorio\TercerCiclo\semana11\bin\Debug\net9.0\semana11.pdb
+C:\Users\felix\Documents\estructura de Datos\repositorio\TercerCiclo\semana11\obj\Debug\net9.0\semana11.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\felix\Documents\estructura de Datos\repositorio\TercerCiclo\semana11\obj\Debug\net9.0\semana11.AssemblyInfoInputs.cache
+C:\Users\felix\Documents\estructura de Datos\repositorio\TercerCiclo\semana11\obj\Debug\net9.0\semana11.AssemblyInfo.cs
+C:\Users\felix\Documents\estructura de Datos\repositorio\TercerCiclo\semana11\obj\Debug\net9.0\semana11.csproj.CoreCompileInputs.cache
+C:\Users\felix\Documents\estructura de Datos\repositorio\TercerCiclo\semana11\obj\Debug\net9.0\semana11.sourcelink.json
+C:\Users\felix\Documents\estructura de Datos\repositorio\TercerCiclo\semana11\obj\Debug\net9.0\semana11.dll
+C:\Users\felix\Documents\estructura de Datos\repositorio\TercerCiclo\semana11\obj\Debug\net9.0\refint\semana11.dll
+C:\Users\felix\Documents\estructura de Datos\repositorio\TercerCiclo\semana11\obj\Debug\net9.0\semana11.pdb
+C:\Users\felix\Documents\estructura de Datos\repositorio\TercerCiclo\semana11\obj\Debug\net9.0\semana11.genruntimeconfig.cache
+C:\Users\felix\Documents\estructura de Datos\repositorio\TercerCiclo\semana11\obj\Debug\net9.0\ref\semana11.dll
