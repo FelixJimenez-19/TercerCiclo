@@ -1,0 +1,15 @@
+C:\Users\felix\Documents\estructura de Datos\repositorio\TercerCiclo\Practico_experimental_3\bin\Debug\net9.0\Practico_experimental_3.exe
+C:\Users\felix\Documents\estructura de Datos\repositorio\TercerCiclo\Practico_experimental_3\bin\Debug\net9.0\Practico_experimental_3.deps.json
+C:\Users\felix\Documents\estructura de Datos\repositorio\TercerCiclo\Practico_experimental_3\bin\Debug\net9.0\Practico_experimental_3.runtimeconfig.json
+C:\Users\felix\Documents\estructura de Datos\repositorio\TercerCiclo\Practico_experimental_3\bin\Debug\net9.0\Practico_experimental_3.dll
+C:\Users\felix\Documents\estructura de Datos\repositorio\TercerCiclo\Practico_experimental_3\bin\Debug\net9.0\Practico_experimental_3.pdb
+C:\Users\felix\Documents\estructura de Datos\repositorio\TercerCiclo\Practico_experimental_3\obj\Debug\net9.0\Practico_experimental_3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\felix\Documents\estructura de Datos\repositorio\TercerCiclo\Practico_experimental_3\obj\Debug\net9.0\Practico_experimental_3.AssemblyInfoInputs.cache
+C:\Users\felix\Documents\estructura de Datos\repositorio\TercerCiclo\Practico_experimental_3\obj\Debug\net9.0\Practico_experimental_3.AssemblyInfo.cs
+C:\Users\felix\Documents\estructura de Datos\repositorio\TercerCiclo\Practico_experimental_3\obj\Debug\net9.0\Practico_experimental_3.csproj.CoreCompileInputs.cache
+C:\Users\felix\Documents\estructura de Datos\repositorio\TercerCiclo\Practico_experimental_3\obj\Debug\net9.0\Practico_experimental_3.sourcelink.json
+C:\Users\felix\Documents\estructura de Datos\repositorio\TercerCiclo\Practico_experimental_3\obj\Debug\net9.0\Practico_experimental_3.dll
+C:\Users\felix\Documents\estructura de Datos\repositorio\TercerCiclo\Practico_experimental_3\obj\Debug\net9.0\refint\Practico_experimental_3.dll
+C:\Users\felix\Documents\estructura de Datos\repositorio\TercerCiclo\Practico_experimental_3\obj\Debug\net9.0\Practico_experimental_3.pdb
+C:\Users\felix\Documents\estructura de Datos\repositorio\TercerCiclo\Practico_experimental_3\obj\Debug\net9.0\Practico_experimental_3.genruntimeconfig.cache
+C:\Users\felix\Documents\estructura de Datos\repositorio\TercerCiclo\Practico_experimental_3\obj\Debug\net9.0\ref\Practico_experimental_3.dll

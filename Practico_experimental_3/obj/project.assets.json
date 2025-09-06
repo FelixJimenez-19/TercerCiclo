@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\felix\\Documents\\estructura de Datos\\repositorio\\TercerCiclo\\SimuladorAuditorio\\SimuladorAuditorio.csproj",
-      "projectName": "SimuladorAuditorio",
-      "projectPath": "C:\\Users\\felix\\Documents\\estructura de Datos\\repositorio\\TercerCiclo\\SimuladorAuditorio\\SimuladorAuditorio.csproj",
+      "projectUniqueName": "C:\\Users\\felix\\Documents\\estructura de Datos\\repositorio\\TercerCiclo\\Practico_experimental_3\\Practico_experimental_3.csproj",
+      "projectName": "Practico_experimental_3",
+      "projectPath": "C:\\Users\\felix\\Documents\\estructura de Datos\\repositorio\\TercerCiclo\\Practico_experimental_3\\Practico_experimental_3.csproj",
       "packagesPath": "C:\\Users\\felix\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\felix\\Documents\\estructura de Datos\\repositorio\\TercerCiclo\\SimuladorAuditorio\\obj\\",
+      "outputPath": "C:\\Users\\felix\\Documents\\estructura de Datos\\repositorio\\TercerCiclo\\Practico_experimental_3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\felix\\AppData\\Roaming\\NuGet\\NuGet.Config"
