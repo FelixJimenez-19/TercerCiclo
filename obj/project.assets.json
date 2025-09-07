@@ -8,19 +8,19 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {}
+    "C:\\Users\\felix\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Downloads\\more\\Felix UEA documents\\Estructuradedatos\\Estructuradedatos.csproj",
+      "projectUniqueName": "C:\\Users\\felix\\Documents\\estructura de Datos\\repositorio\\TercerCiclo\\Estructuradedatos.csproj",
       "projectName": "Estructuradedatos",
-      "projectPath": "C:\\Users\\user\\Downloads\\more\\Felix UEA documents\\Estructuradedatos\\Estructuradedatos.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Downloads\\more\\Felix UEA documents\\Estructuradedatos\\obj\\",
+      "projectPath": "C:\\Users\\felix\\Documents\\estructura de Datos\\repositorio\\TercerCiclo\\Estructuradedatos.csproj",
+      "packagesPath": "C:\\Users\\felix\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\felix\\Documents\\estructura de Datos\\repositorio\\TercerCiclo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\felix\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -65,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

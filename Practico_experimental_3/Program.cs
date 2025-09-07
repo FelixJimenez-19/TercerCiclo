@@ -1,37 +1,21 @@
-﻿using System;
+﻿
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Diagnostics;
 
-/// <summary>
-/// Clase que representa un libro en la biblioteca.
-/// Contiene información básica y métodos para comparación y visualización.
-/// </summary>
+// Clase principal que representa un libro
 public class Libro
 {
-    /// <summary>
-    /// Identificador único del libro.
-    /// </summary>
+    // Atributos
     public int Id { get; set; }
-    /// <summary>
-    /// Título del libro.
-    /// </summary>
     public string Titulo { get; set; }
-    /// <summary>
-    /// Autor del libro.
-    /// </summary>
     public string Autor { get; set; }
-    /// <summary>
-    /// Año de publicación del libro.
-    /// </summary>
     public int AnioPublicacion { get; set; }
-    /// <summary>
-    /// Indica si el libro está disponible para préstamo.
-    /// </summary>
     public bool EstaDisponible { get; set; }
 
-    /// <summary>
-    /// Constructor para inicializar un libro con todos sus datos.
-    /// </summary>
+    // Constructor
     public Libro(int id, string titulo, string autor, int anioPublicacion, bool estaDisponible)
     {
         Id = id;
@@ -41,18 +25,14 @@ public class Libro
         EstaDisponible = estaDisponible;
     }
 
-    /// <summary>
-    /// Devuelve una representación legible del libro.
-    /// </summary>
+    // Sobrescribir el método ToString para una representación legible del objeto
     public override string ToString()
     {
         string disponibilidad = EstaDisponible ? "Disponible" : "No disponible";
         return $"ID: {Id}, Título: \"{Titulo}\", Autor: {Autor}, Año: {AnioPublicacion}, Estado: {disponibilidad}";
     }
 
-    /// <summary>
-    /// Compara dos libros por su ID para unicidad en colecciones.
-    /// </summary>
+    // Sobrescribir Equals y GetHashCode para que los objetos Libro puedan ser usados en un HashSet
     public override bool Equals(object obj)
     {
         if (obj is Libro otroLibro)
@@ -62,58 +42,44 @@ public class Libro
         return false;
     }
 
-    /// <summary>
-    /// Devuelve el código hash basado en el ID del libro.
-    /// </summary>
     public override int GetHashCode()
     {
         return Id.GetHashCode();
     }
 }
 
-/// <summary>
-/// Clase que gestiona la biblioteca, permitiendo agregar, buscar, editar, eliminar y listar libros.
-/// Utiliza colecciones para garantizar unicidad y eficiencia en búsquedas.
-/// </summary>
+// Clase que gestiona la biblioteca, usando colecciones para la gestión de libros
 public class Biblioteca
 {
-    // HashSet para garantizar la unicidad de los libros por su ID
+    // Usamos un HashSet para garantizar la unicidad de los libros por su ID
     private HashSet<Libro> librosUnicos;
-    // Dictionary para búsqueda rápida por ID
+    // Usamos un Dictionary para una búsqueda rápida por ID
     private Dictionary<int, Libro> librosPorId;
-    // Controla el próximo ID a asignar
     private int proximoId = 1;
 
-    /// <summary>
-    /// Constructor que inicializa las colecciones de la biblioteca.
-    /// </summary>
     public Biblioteca()
     {
         librosUnicos = new HashSet<Libro>();
         librosPorId = new Dictionary<int, Libro>();
     }
 
-    /// <summary>
-    /// Agrega un nuevo libro a la biblioteca si no existe uno igual (por título y autor).
-    /// </summary>
+    // Método para agregar un nuevo libro
     public void AgregarLibro(string titulo, string autor, int anioPublicacion)
     {
-        // Verifica si el libro ya existe usando el HashSet
+        // Verificar si el libro ya existe usando el HashSet
         if (librosUnicos.Any(l => l.Titulo.Equals(titulo, StringComparison.OrdinalIgnoreCase) && l.Autor.Equals(autor, StringComparison.OrdinalIgnoreCase)))
         {
             Console.WriteLine("El libro ya existe en la biblioteca.");
             return;
         }
-        // Crea y agrega el nuevo libro
+
         Libro nuevoLibro = new Libro(proximoId++, titulo, autor, anioPublicacion, true);
         librosUnicos.Add(nuevoLibro);
         librosPorId.Add(nuevoLibro.Id, nuevoLibro);
         Console.WriteLine($"Libro agregado: {nuevoLibro.Titulo}");
     }
 
-    /// <summary>
-    /// Busca un libro por su ID.
-    /// </summary>
+    // Método para buscar un libro por su ID
     public Libro BuscarLibroPorId(int id)
     {
         if (librosPorId.ContainsKey(id))
@@ -123,20 +89,18 @@ public class Biblioteca
         return null;
     }
 
-    /// <summary>
-    /// Edita los detalles de un libro existente.
-    /// </summary>
+    // Método para editar los detalles de un libro
     public void EditarLibro(int id, string nuevoTitulo, string nuevoAutor, int nuevoAnio)
     {
         Libro libroExistente = BuscarLibroPorId(id);
         if (libroExistente != null)
         {
-            // Remueve y vuelve a agregar para actualizar el HashSet
+            // Remover y agregar para asegurar la actualización en el HashSet
             librosUnicos.Remove(libroExistente);
             libroExistente.Titulo = nuevoTitulo;
             libroExistente.Autor = nuevoAutor;
             libroExistente.AnioPublicacion = nuevoAnio;
-            librosUnicos.Add(libroExistente);
+            librosUnicos.Add(libroExistente); // Vuelve a agregar el libro al HashSet
             Console.WriteLine("Libro editado exitosamente.");
         }
         else
@@ -145,9 +109,7 @@ public class Biblioteca
         }
     }
 
-    /// <summary>
-    /// Elimina un libro de la biblioteca por su ID.
-    /// </summary>
+    // Método para eliminar un libro
     public void EliminarLibro(int id)
     {
         Libro libroAEliminar = BuscarLibroPorId(id);
@@ -163,9 +125,7 @@ public class Biblioteca
         }
     }
 
-    /// <summary>
-    /// Cambia la disponibilidad de un libro (prestado/disponible).
-    /// </summary>
+    // Método para cambiar la disponibilidad del libro
     public void CambiarDisponibilidad(int id, bool estaDisponible)
     {
         Libro libro = BuscarLibroPorId(id);
@@ -180,9 +140,7 @@ public class Biblioteca
         }
     }
 
-    /// <summary>
-    /// Lista todos los libros de la biblioteca.
-    /// </summary>
+    // Método de reportería para listar todos los libros
     public void ListarTodosLosLibros()
     {
         if (librosUnicos.Count == 0)
@@ -190,6 +148,7 @@ public class Biblioteca
             Console.WriteLine("No hay libros en la biblioteca.");
             return;
         }
+
         Console.WriteLine("\n--- Lista de todos los libros ---");
         foreach (var libro in librosUnicos)
         {
@@ -198,9 +157,7 @@ public class Biblioteca
         Console.WriteLine("----------------------------------");
     }
 
-    /// <summary>
-    /// Lista solo los libros disponibles para préstamo.
-    /// </summary>
+    // Método de reportería para listar libros disponibles
     public void ListarLibrosDisponibles()
     {
         var disponibles = librosUnicos.Where(l => l.EstaDisponible).ToList();
@@ -209,6 +166,7 @@ public class Biblioteca
             Console.WriteLine("No hay libros disponibles en este momento.");
             return;
         }
+
         Console.WriteLine("\n--- Libros disponibles ---");
         foreach (var libro in disponibles)
         {
@@ -217,9 +175,7 @@ public class Biblioteca
         Console.WriteLine("--------------------------");
     }
 
-    /// <summary>
-    /// Lista solo los libros que no están disponibles (prestados).
-    /// </summary>
+    // Método de reportería para listar libros no disponibles
     public void ListarLibrosNoDisponibles()
     {
         var noDisponibles = librosUnicos.Where(l => !l.EstaDisponible).ToList();
@@ -228,6 +184,7 @@ public class Biblioteca
             Console.WriteLine("No hay libros prestados en este momento.");
             return;
         }
+
         Console.WriteLine("\n--- Libros no disponibles ---");
         foreach (var libro in noDisponibles)
         {
@@ -237,17 +194,25 @@ public class Biblioteca
     }
 }
 
-/// <summary>
-/// Clase principal del programa. Gestiona la interacción con el usuario y el menú de opciones.
-/// </summary>
+// Clase principal del programa para la interacción con el usuario
 class Program
 {
+    // Método auxiliar para medir el tiempo de ejecución de cualquier acción
+    static void MeasureExecutionTime(Action action, string operationName)
+    {
+        Stopwatch stopwatch = new Stopwatch();
+        stopwatch.Start();
+        action();
+        stopwatch.Stop();
+        Console.WriteLine($"\nOperación '{operationName}' ejecutada en {stopwatch.ElapsedMilliseconds} ms.");
+    }
+
     static void Main(string[] args)
     {
         Biblioteca miBiblioteca = new Biblioteca();
         bool salir = false;
 
-        // Bucle principal del menú de la biblioteca
+        // Bucle principal del menú
         while (!salir)
         {
             Console.WriteLine("\n--- Menú de la Biblioteca ---");
@@ -268,68 +233,71 @@ class Program
             switch (opcion)
             {
                 case "1":
-                    // Agregar libro
-                    Console.Write("Título: ");
-                    string titulo = Console.ReadLine();
-                    Console.Write("Autor: ");
-                    string autor = Console.ReadLine();
-                    Console.Write("Año de publicación: ");
-                    if (int.TryParse(Console.ReadLine(), out int anio))
-                    {
-                        miBiblioteca.AgregarLibro(titulo, autor, anio);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Año inválido. Por favor, intente de nuevo.");
-                    }
-                    break;
-                case "2":
-                    // Buscar libro por ID
-                    Console.Write("ID del libro a buscar: ");
-                    if (int.TryParse(Console.ReadLine(), out int idBuscar))
-                    {
-                        Libro libroEncontrado = miBiblioteca.BuscarLibroPorId(idBuscar);
-                        if (libroEncontrado != null)
+                    MeasureExecutionTime(() => {
+                        Console.Write("Título: ");
+                        string titulo = Console.ReadLine();
+                        Console.Write("Autor: ");
+                        string autor = Console.ReadLine();
+                        Console.Write("Año de publicación: ");
+                        if (int.TryParse(Console.ReadLine(), out int anio))
                         {
-                            Console.WriteLine($"Libro encontrado: {libroEncontrado}");
+                            miBiblioteca.AgregarLibro(titulo, autor, anio);
                         }
                         else
                         {
-                            Console.WriteLine("Libro no encontrado.");
+                            Console.WriteLine("Año inválido. Por favor, intente de nuevo.");
                         }
-                    }
-                    else
-                    {
-                        Console.WriteLine("ID inválido. Por favor, intente de nuevo.");
-                    }
+                    }, "Agregar libro");
                     break;
-                case "3":
-                    // Editar libro
-                    Console.Write("ID del libro a editar: ");
-                    if (int.TryParse(Console.ReadLine(), out int idEditar))
-                    {
-                        Libro libroAEditar = miBiblioteca.BuscarLibroPorId(idEditar);
-                        if (libroAEditar != null)
+                case "2":
+                    MeasureExecutionTime(() => {
+                        Console.Write("ID del libro a buscar: ");
+                        if (int.TryParse(Console.ReadLine(), out int idBuscar))
                         {
-                            Console.WriteLine($"Editando: {libroAEditar}");
-                            Console.Write("Nuevo título: ");
-                            string nuevoTitulo = Console.ReadLine();
-                            Console.Write("Nuevo autor: ");
-                            string nuevoAutor = Console.ReadLine();
-                            Console.Write("Nuevo año de publicación: ");
-                            if (int.TryParse(Console.ReadLine(), out int nuevoAnio))
+                            Libro libroEncontrado = miBiblioteca.BuscarLibroPorId(idBuscar);
+                            if (libroEncontrado != null)
                             {
-                                miBiblioteca.EditarLibro(idEditar, nuevoTitulo, nuevoAutor, nuevoAnio);
+                                Console.WriteLine($"Libro encontrado: {libroEncontrado}");
                             }
                             else
                             {
-                                Console.WriteLine("Año inválido.");
+                                Console.WriteLine("Libro no encontrado.");
                             }
                         }
                         else
                         {
-                            Console.WriteLine("Libro no encontrado.");
+                            Console.WriteLine("ID inválido. Por favor, intente de nuevo.");
                         }
+                    }, "Buscar libro por ID");
+                    break;
+                case "3":
+                    Console.Write("ID del libro a editar: ");
+                    if (int.TryParse(Console.ReadLine(), out int idEditar))
+                    {
+                        MeasureExecutionTime(() => {
+                            Libro libroAEditar = miBiblioteca.BuscarLibroPorId(idEditar);
+                            if (libroAEditar != null)
+                            {
+                                Console.WriteLine($"Editando: {libroAEditar}");
+                                Console.Write("Nuevo título: ");
+                                string nuevoTitulo = Console.ReadLine();
+                                Console.Write("Nuevo autor: ");
+                                string nuevoAutor = Console.ReadLine();
+                                Console.Write("Nuevo año de publicación: ");
+                                if (int.TryParse(Console.ReadLine(), out int nuevoAnio))
+                                {
+                                    miBiblioteca.EditarLibro(idEditar, nuevoTitulo, nuevoAutor, nuevoAnio);
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Año inválido.");
+                                }
+                            }
+                            else
+                            {
+                                Console.WriteLine("Libro no encontrado.");
+                            }
+                        }, "Editar libro");
                     }
                     else
                     {
@@ -337,56 +305,60 @@ class Program
                     }
                     break;
                 case "4":
-                    // Eliminar libro
-                    Console.Write("ID del libro a eliminar: ");
-                    if (int.TryParse(Console.ReadLine(), out int idEliminar))
-                    {
-                        miBiblioteca.EliminarLibro(idEliminar);
-                    }
-                    else
-                    {
-                        Console.WriteLine("ID inválido. Por favor, intente de nuevo.");
-                    }
-                    break;
-                case "5":
-                    // Cambiar disponibilidad
-                    Console.Write("ID del libro para cambiar su disponibilidad: ");
-                    if (int.TryParse(Console.ReadLine(), out int idDisponibilidad))
-                    {
-                        Console.Write("¿Está disponible? (s/n): ");
-                        string disponibleInput = Console.ReadLine().ToLower();
-                        if (disponibleInput == "s")
+                    MeasureExecutionTime(() => {
+                        Console.Write("ID del libro a eliminar: ");
+                        if (int.TryParse(Console.ReadLine(), out int idEliminar))
                         {
-                            miBiblioteca.CambiarDisponibilidad(idDisponibilidad, true);
-                        }
-                        else if (disponibleInput == "n")
-                        {
-                            miBiblioteca.CambiarDisponibilidad(idDisponibilidad, false);
+                            miBiblioteca.EliminarLibro(idEliminar);
                         }
                         else
                         {
-                            Console.WriteLine("Entrada inválida. Use 's' para sí y 'n' para no.");
+                            Console.WriteLine("ID inválido. Por favor, intente de nuevo.");
                         }
-                    }
-                    else
-                    {
-                        Console.WriteLine("ID inválido. Por favor, intente de nuevo.");
-                    }
+                    }, "Eliminar libro");
+                    break;
+                case "5":
+                    MeasureExecutionTime(() => {
+                        Console.Write("ID del libro para cambiar su disponibilidad: ");
+                        if (int.TryParse(Console.ReadLine(), out int idDisponibilidad))
+                        {
+                            Console.Write("¿Está disponible? (s/n): ");
+                            string disponibleInput = Console.ReadLine().ToLower();
+                            if (disponibleInput == "s")
+                            {
+                                miBiblioteca.CambiarDisponibilidad(idDisponibilidad, true);
+                            }
+                            else if (disponibleInput == "n")
+                            {
+                                miBiblioteca.CambiarDisponibilidad(idDisponibilidad, false);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Entrada inválida. Use 's' para sí y 'n' para no.");
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("ID inválido. Por favor, intente de nuevo.");
+                        }
+                    }, "Cambiar disponibilidad");
                     break;
                 case "6":
-                    // Listar todos los libros
-                    miBiblioteca.ListarTodosLosLibros();
+                    MeasureExecutionTime(() => {
+                        miBiblioteca.ListarTodosLosLibros();
+                    }, "Listar todos los libros");
                     break;
                 case "7":
-                    // Listar libros disponibles
-                    miBiblioteca.ListarLibrosDisponibles();
+                    MeasureExecutionTime(() => {
+                        miBiblioteca.ListarLibrosDisponibles();
+                    }, "Listar libros disponibles");
                     break;
                 case "8":
-                    // Listar libros no disponibles
-                    miBiblioteca.ListarLibrosNoDisponibles();
+                    MeasureExecutionTime(() => {
+                        miBiblioteca.ListarLibrosNoDisponibles();
+                    }, "Listar libros no disponibles");
                     break;
                 case "9":
-                    // Salir
                     salir = true;
                     Console.WriteLine("Saliendo de la aplicación. ¡Hasta luego!");
                     break;
